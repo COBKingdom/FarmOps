@@ -73,3 +73,25 @@ export async function createDailyLog(
 
   return data
 }
+export async function getDailyLogs(
+  batchId: string
+) {
+  const { data, error } = await supabase
+    .from('daily_poultry_logs')
+    .select('*')
+    .eq('batch_id', batchId)
+    .order('created_at', {
+      ascending: false,
+    })
+
+  if (error) {
+    console.error(
+      'Get Daily Logs Error:',
+      JSON.stringify(error, null, 2)
+    )
+
+    return []
+  }
+
+  return data
+}

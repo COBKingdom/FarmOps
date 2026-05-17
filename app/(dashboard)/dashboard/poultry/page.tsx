@@ -1,9 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+
 import { CreateBatchModal } from '@/components/poultry/create-batch-modal'
 import { CreateDailyLogModal } from '@/components/poultry/create-daily-log-modal'
-import { getPoultryBatches } from '@/services/poultry.service'
+
+import {
+  getPoultryBatches,
+  getDailyLogs,
+} from '@/services/poultry.service'
 
 export default function PoultryPage() {
   const [openModal, setOpenModal] =
@@ -17,11 +22,30 @@ export default function PoultryPage() {
   const [selectedBatchId, setSelectedBatchId] =
     useState('')
 
+  const [logs, setLogs] = useState<{
+    [key: string]: any[]
+  }>({})
+
   useEffect(() => {
     async function loadBatches() {
       const data = await getPoultryBatches()
 
       setBatches(data || [])
+
+      if (data) {
+        const logsMap: {
+          [key: string]: any[]
+        } = {}
+
+        for (const batch of data) {
+          const batchLogs =
+            await getDailyLogs(batch.id)
+
+          logsMap[batch.id] = batchLogs || []
+        }
+
+        setLogs(logsMap)
+      }
     }
 
     loadBatches()
@@ -97,6 +121,62 @@ export default function PoultryPage() {
               >
                 + Daily Log
               </button>
+
+              <div className="pt-4 border-t space-y-2">
+                <h3 className="font-semibold text-sm">
+                  Recent Daily Logs
+                </h3>
+
+                {logs[batch.id]?.length === 0 ? (
+                  <p className="text-xs text-gray-500">
+                    No logs yet
+                  </p>
+                ) : (
+                  logs[batch.id]
+                    ?.slice(0, 3)
+                    .map((log) => (
+                      <div
+                        key={log.id}
+                        className="bg-gray-50 rounded-xl p-3 text-xs space-y-1"
+                      >
+                        <p>
+                          Date:{' '}
+                          {new Date(
+                            log.created_at
+                          ).toLocaleDateString()}
+                        </p>
+
+                        <p>
+                          Mortality:{' '}
+                          <span className="font-medium">
+                            {log.mortality}
+                          </span>
+                        </p>
+
+                        <p>
+                          Feed Used:{' '}
+                          <span className="font-medium">
+                            {log.feed_used_kg}kg
+                          </span>
+                        </p>
+
+                        <p>
+                          Medication:{' '}
+                          <span className="font-medium">
+                            {log.medication || '-'}
+                          </span>
+                        </p>
+
+                        <p>
+                          Birds Sold:{' '}
+                          <span className="font-medium">
+                            {log.birds_sold}
+                          </span>
+                        </p>
+                      </div>
+                    ))
+                )}
+              </div>
             </div>
           ))}
         </div>

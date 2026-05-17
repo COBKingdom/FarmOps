@@ -23,7 +23,7 @@ export function Sidebar() {
             <Icon name="Sprout" className="w-6 h-6 text-primary-foreground" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-lg text-sidebar-foreground">PoultryOps</span>
+            <span className="font-bold text-lg text-sidebar-foreground">FarmOps</span>
             <span className="text-xs text-sidebar-accent-foreground">TrueOps</span>
           </div>
         </Link>

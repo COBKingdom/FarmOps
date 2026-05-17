@@ -1,10 +1,10 @@
-# PoultryOps Demo & Testing Guide
+# FarmOps Demo & Testing Guide
 
 ## Quick Demo Start
 
 ### Demo Credentials
 
-**Email**: `demo@poultryops.local`  
+**Email**: `demo@farmops.local`  
 **Password**: `Demo@12345`
 
 These credentials are displayed on the login page for easy reference.

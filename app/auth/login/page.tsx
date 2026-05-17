@@ -51,7 +51,7 @@ export default function LoginPage() {
               <Leaf className="w-6 h-6 text-primary-foreground" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-foreground">PoultryOps</h1>
+          <h1 className="text-3xl font-bold text-foreground">FarmOps</h1>
           <p className="text-muted-foreground">Agricultural Operations Platform</p>
         </div>
 
@@ -101,7 +101,7 @@ export default function LoginPage() {
               disabled={loading}
               className="w-full h-11 bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
             >
-              {loading ? 'Logging in...' : 'Login to PoultryOps'}
+              {loading ? 'Logging in...' : 'Login to FarmOps'}
             </Button>
           </form>
 
@@ -117,7 +117,7 @@ export default function LoginPage() {
         <Card className="p-4 bg-secondary/30 border border-border/30">
           <p className="text-xs font-medium text-foreground mb-2">Demo Credentials:</p>
           <div className="space-y-1 text-xs text-muted-foreground">
-            <p>Email: <span className="text-foreground font-mono">demo@poultryops.local</span></p>
+            <p>Email: <span className="text-foreground font-mono">demo@farmops.local</span></p>
             <p>Password: <span className="text-foreground font-mono">Demo@12345</span></p>
           </div>
         </Card>

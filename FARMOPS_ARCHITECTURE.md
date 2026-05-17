@@ -1,11 +1,11 @@
-# FarmOps - Agricultural Operations Management Platform
+# PoultryOps - Agricultural Operations Management Platform
 ## Enterprise Architecture Documentation
 
 ---
 
 ## Overview
 
-FarmOps is a professional operational management platform for farms, agribusinesses, and food production operations across Africa. It's designed as part of the TrueOps ecosystem and built on enterprise-grade architecture inspired by AquaOps but adapted specifically for agriculture workflows.
+PoultryOps is a professional operational management platform for farms, agribusinesses, and food production operations across Africa. It's designed as part of the TrueOps ecosystem and built on enterprise-grade architecture inspired by AquaOps but adapted specifically for agriculture workflows.
 
 ### Key Features
 - Multi-farm/branch operations management
@@ -492,7 +492,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=xxxxx
 NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL=http://localhost:3000/auth/callback (dev only)
 
 # App
-NEXT_PUBLIC_APP_NAME=FarmOps
+NEXT_PUBLIC_APP_NAME=PoultryOps
 NEXT_PUBLIC_APP_VERSION=1.0.0
 ```
 
@@ -529,7 +529,7 @@ NEXT_PUBLIC_APP_VERSION=1.0.0
 
 ## License & Attribution
 
-FarmOps is built as part of the TrueOps ecosystem for African agriculture businesses.
+PoultryOps is built as part of the TrueOps ecosystem for African agriculture businesses.
 
 ---
 

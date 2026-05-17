@@ -1,6 +1,6 @@
-# FarmOps - Agricultural Operations Management Platform
+# PoultryOps - Agricultural Operations Management Platform
 
-A professional, enterprise-grade SaaS platform for managing farm and agribusiness operations across Africa. FarmOps is part of the TrueOps ecosystem and provides comprehensive tools for tracking production, managing inventory, handling finances, and monitoring operations.
+A professional, enterprise-grade SaaS platform for managing farm and agribusiness operations across Africa. PoultryOps is part of the TrueOps ecosystem and provides comprehensive tools for tracking production, managing inventory, handling finances, and monitoring operations.
 
 ## Quick Start
 

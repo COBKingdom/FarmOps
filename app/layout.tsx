@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'FarmOps - Agricultural Operations Platform',
+  title: 'PoultryOps - Agricultural Operations Platform',
   description: 'Professional operational management platform for farms, agribusinesses and food production operations across Africa',
   generator: 'v0.app',
   icons: {

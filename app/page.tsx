@@ -29,7 +29,7 @@ export default function Home() {
         <div className="w-12 h-12 rounded-full border-2 border-primary border-t-transparent animate-spin mx-auto" />
 
         <p className="text-muted-foreground">
-          Loading FarmOps...
+          Loading PoultryOps...
         </p>
       </div>
     </div>

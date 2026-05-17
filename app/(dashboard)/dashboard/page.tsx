@@ -62,7 +62,7 @@ export default function DashboardPage() {
       <div className="space-y-2">
         <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
         <p className="text-muted-foreground">
-          {farm?.name || 'Welcome to FarmOps'} - Operational command center
+          {farm?.name || 'Welcome to PoultryOps'} - Operational command center
         </p>
       </div>
 

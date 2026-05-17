@@ -91,7 +91,7 @@ export default function SignUpPage() {
               <Leaf className="w-6 h-6 text-primary-foreground" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-foreground">Join FarmOps</h1>
+          <h1 className="text-3xl font-bold text-foreground">Join PoultryOps</h1>
           <p className="text-muted-foreground">Start managing your farm operations</p>
         </div>
 
@@ -218,7 +218,7 @@ export default function SignUpPage() {
               disabled={loading}
               className="w-full h-10 bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
             >
-              {loading ? 'Creating account...' : 'Create FarmOps Account'}
+              {loading ? 'Creating account...' : 'Create PoultryOps Account'}
             </Button>
           </form>
 
